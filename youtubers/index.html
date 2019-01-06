@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Youtubers</title>
+    <!--<script type="text/javascript" src="d3/d3.js"></script>-->
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Pathway+Gothic+One&amp;subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:300&amp;subset=chinese-traditional" rel="stylesheet">
+    <script type="text/javascript" src="http://d3js.org/d3.v4.min.js"></script>
+    
+  	<link rel="stylesheet" type="text/css" href="main.css" />
+  	<script type="text/javascript" src='main.js'></script>
+
+	<script type="text/javascript">
+
+	var g_sFilePath = "json";
+	var g_sFileName = "youtubers";
+
+	var g_nSVG_Main_W_PX = 0;
+	var g_nSVG_Main_H_PX = 0;
+	var g_nSVG_Main_W_PT = 800;
+	var g_nSVG_Main_H_PT = 2500;
+
+	function main() {
+
+		g_nSVG_Main_W_PX = document.getElementById("div_id_main").offsetWidth;  // 1067
+		g_nSVG_Main_H_PX = document.getElementById("div_id_main").offsetHeight; // 3333
+
+		console.log(g_nSVG_Main_W_PX, g_nSVG_Main_H_PX);
+
+		funcLoadData(g_sFilePath, g_sFileName, funcDraw);
+	}
+
+	/*
+	var g_colorBackground = "#5B5E5F";//"#666666"; 
+	var g_colorBackground_Draw = "#D6D8BC";//"PaleGoldenRod"; 
+	var g_colorTaiwan = "Crimson";//"#FF0000";//"red"; 
+
+	var g_nSVG_Wmm = 0;
+	var g_nSVG_Wmm = 0;
+	var g_nSVG_Wpt = 0;
+	var g_nSVG_Hpt = 0;
+
+	var g_nSVG_Padding_mm = 20;
+
+	var g_nSVG_Grid_mm = 20;
+
+	var g_nSVG_Draw_Wmm = 0;
+	var g_nSVG_Draw_Hmm = 0;
+
+	var g_sID_DIV_svgMain = "svg_main";
+	var g_sID_SVG_poster = "poster";
+
+	function main() {
+
+		g_nSVG_Wmm = 841;//document.getElementById(g_sID_DIV_svgMain).offsetWidth;
+		g_nSVG_Hmm = 1189;//document.getElementById(g_sID_DIV_svgMain).offsetHeight;
+		g_nSVG_Wpt = document.getElementById(g_sID_DIV_svgMain).offsetWidth;  // 3180
+		g_nSVG_Hpt = document.getElementById(g_sID_DIV_svgMain).offsetHeight; // 4492
+
+		g_nSVG_Draw_Wmm = g_nSVG_Wmm - (g_nSVG_Padding_mm * 2);
+		g_nSVG_Draw_Hmm = g_nSVG_Hmm - (g_nSVG_Padding_mm * 2);// - (g_nSVG_Title_Hmm);
+
+		g_nSelectedCountryID = 72;
+
+		funcLoadData("source_data", "world", "nation", "twCounty2010merge.topo", "taiwan", "taiwan_population", funcDraw);
+	}
+	*/
+
+	</script>
+</head>
+
+<body>
+
+
+<div id="div_id_title">
+	<span class="font_size_20 font_weigh_bold">The Trends of Taiwanese Youtubers '16-'18</span>
+	<span class="">v1.0</span>
+</div>
+
+<div id="div_id_main">
+</div>
+
+<div id="div_id_editor">
+	<span class="color_sub">Designed by smilekevin / E-Mail: kevin7261@gmail.com</span>
+</div>
+
+<script type="text/javascript">
+		
+	window.load = main();
+
+</script>
+
+</body>
+
+</html>
