@@ -454,7 +454,7 @@ function funcDraw_ChannelName(svgMain, d, i, fScale_Youtuber, fScale_LikeRatio) 
 								.attr("y2", text_y + title_font_size + text_spacing + subtitle_font_size + text_spacing + dislikeratio_stroke_size + dislikeratio_stroke_size + "pt")
 								.attr("stroke", "#015249")
 								.attr("stroke-width", dislikeratio_stroke_size + "pt")
-								.attr("stroke-opacity", 0.2);
+								.attr("stroke-opacity", 0.4);
 
 			svgYoutuber_title.append("line")
 								.attr("class", "line_id_likeratio")
@@ -464,7 +464,7 @@ function funcDraw_ChannelName(svgMain, d, i, fScale_Youtuber, fScale_LikeRatio) 
 								.attr("y2", text_y + title_font_size + text_spacing + subtitle_font_size + text_spacing + dislikeratio_stroke_size + dislikeratio_stroke_size + "pt")
 								.attr("stroke", "#CD5360")
 								.attr("stroke-width", dislikeratio_stroke_size + "pt")
-								.attr("stroke-opacity", 0.2);
+								.attr("stroke-opacity", 0.4);
 
 			svgYoutuber_title.append("text")
 								.attr("id", "text_id_video_dislikeratio_" + d.channel_id)
@@ -504,7 +504,7 @@ function hideVideoCircles(nChannelID) {
 function showDislikeRatio(nChannelID) {
 
 	d3.select("#text_id_video_dislikeratio_" + nChannelID)
-		.attr("fill-opacity", 0.8);
+		.attr("fill-opacity", 1);
 }
 
 function hideDislikeRatio(nChannelID) {
