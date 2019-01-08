@@ -395,7 +395,7 @@ function funcDraw_ChannelName(svgMain, d, i, fScale_Youtuber, fScale_LikeRatio) 
 		let text_y = fScale_Youtuber(i) + padding_top;
 
    		let formatNumStr = d3.format(",");
-   		let formatPercent = d3.format(".3p");
+   		let formatPercent = d3.format(".2p");
 
 		svgYoutuber_title = svgMain.append("a")
 							.attr("xlink:href", "https://www.youtube.com/channel/" + d.channel_id)
