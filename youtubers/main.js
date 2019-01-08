@@ -239,7 +239,7 @@ function funcDraw_Content() {
 
 						showDislikeRatio(d.channel_id);
 
-   						let formatNumStr = d3.format(",.10o");
+   						let formatNumStr = d3.format(",");
 
    						let pt_x = fScale_Date_PT(getDateNumber(d_video.date, VIDEOS_YEAR_START, VIDEOS_YEAR_END));
 
@@ -394,7 +394,7 @@ function funcDraw_ChannelName(svgMain, d, i, fScale_Youtuber, fScale_LikeRatio) 
 		let text_x = PADDING_LEFT + YOUTUBER_IMAGE_WIDTH + image_right_padding;
 		let text_y = fScale_Youtuber(i) + padding_top;
 
-   		let formatNumStr = d3.format(",.10o");
+   		let formatNumStr = d3.format(",");
    		let formatPercent = d3.format(".3p");
 
 		svgYoutuber_title = svgMain.append("a")
