@@ -8,7 +8,9 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Pathway+Gothic+One&amp;subset=latin-ext" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:300&amp;subset=chinese-traditional" rel="stylesheet">
-    <script type="text/javascript" src="http://d3js.org/d3.v4.min.js"></script>
+    
+    <script src="http://d3js.org/d3.v4.min.js"></script>
+  	<script src="jquery-3.3.1.min.js"></script>
 
   	<link rel="stylesheet" type="text/css" href="main.css" />
   	<script type="text/javascript" src='main.js'></script>
@@ -21,16 +23,27 @@
 	var g_nSVG_Main_W_PX = 0;
 	var g_nSVG_Main_H_PX = 0;
 	var g_nSVG_Main_W_PT = 800;
-	var g_nSVG_Main_H_PT = 2500;
+	var g_nSVG_Main_H_PT = 3900;
 
 	function main() {
+
+		let attrs = getUrlVars();
+		
+		page = (attrs.p == null) ? 1 : attrs.p;
+
+		$('#span_id_options_mode').hide();
 
 		g_nSVG_Main_W_PX = document.getElementById("div_id_main").offsetWidth;  // 1067
 		g_nSVG_Main_H_PX = document.getElementById("div_id_main").offsetHeight; // 3333
 
-		console.log(g_nSVG_Main_W_PX, g_nSVG_Main_H_PX);
+		funcLoadData(g_sFilePath, g_sFileName, funcMain, page);
 
-		funcLoadData(g_sFilePath, g_sFileName, funcDraw);
+		g_nSVG_Top_H_PX = document.getElementById("div_id_top").offsetHeight; // 3333
+
+		$("#div_id_main").offset({top: g_nSVG_Top_H_PX});
+
+		console.log(g_nSVG_Main_W_PX, g_nSVG_Main_H_PX);
+		console.log(g_nSVG_Top_H_PX);
 	}
 
 	</script>
@@ -38,18 +51,41 @@
 
 <body>
 
+<div id="div_id_top">
 
-<div id="div_id_title">
-	<span class="font_size_20 font_weigh_bold">The Trends of Taiwanese Youtubers '16-'18</span>
-	<span class="">v1.1</span>
+	<div id="div_id_title">
+		<span class="font_size_30 font_weigh_800">The Trends of&nbsp;</span>
+		<span class="font_size_30">&nbsp;100&nbsp;</span>
+		<span class="font_size_30 font_weigh_800">&nbsp;Taiwanese YouTube Channels</span>
+		<span class="font_size_24">&nbsp;&nbsp;</span>
+		<span class="font_size_24">'16-'18</span>
+		<span class="font_size_8" id="span_id_info">
+			<div class="" id="div_id_version">v2.8</div>
+			<div class="" id="div_id_editor">by 
+				<a href="mailto:kevin7261@gmail.com" id="a_id_email">smilekevin</a>
+			</div>
+		</span>
+	</div>
+
+	<div id="div_id_options">
+		<div id="div_id_options_display">
+			<span id="span_id_options_display" class="span_class_options">資料載入中...</span>
+			<span id="span_id_options_page"></span>
+			<span id="span_id_options_mode"  class="span_class_options">顯示全部個別走勢</span>
+		</div>
+		<div id="div_id_options_main"></div>
+	</div>
+
 </div>
 
 <div id="div_id_main">
 </div>
 
+<!--
 <div id="div_id_editor">
 	<span class="color_sub">Designed by smilekevin / E-Mail: kevin7261@gmail.com</span>
 </div>
+-->
 
 <script type="text/javascript">
 		
