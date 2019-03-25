@@ -209,7 +209,7 @@ let vfScale_ViewCount_PX_Youtuber = [];
 
 function funcDraw_Content() {
 
-	let nDate_Min = parseInt(VIDEOS_YEAR_START + "0301");//d3.min(g_dsYoutubers, function (d) { return parseInt(d.videos[d.videos.length - 1].date); });
+	let nDate_Min = parseInt(VIDEOS_YEAR_START + "0101");//d3.min(g_dsYoutubers, function (d) { return parseInt(d.videos[d.videos.length - 1].date); });
 	let nDate_Max = parseInt(VIDEOS_YEAR_END + "0228");//d3.max(g_dsYoutubers, function (d) { return parseInt(d.videos[0].date); });
 	let nViewCount_Max = 212149287;//d3.max(g_dsYoutubers, function (d) { return d3.max(d.videos, function (d_video) { return d_video.view_count; }); });
 	let nLikeCount_Max = 515037;//d3.max(g_dsYoutubers, function (d) { return d3.max(d.videos, function (d_video) { return d_video.like_count; }); });
