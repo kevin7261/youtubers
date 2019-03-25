@@ -1,0 +1,119 @@
+
+.circle_class_country {
+
+  stroke-width: 0.2pt;
+
+  stroke-opacity: 1;
+  fill-opacity: 0;
+}
+
+.text_class_region {
+
+  stroke-opacity: 0;
+  fill-opacity: 1;
+
+  letter-spacing: 1.6pt;　
+}
+
+.text_class_country_title {
+
+  stroke-opacity: 0;
+  fill-opacity: 1;
+
+  letter-spacing: 0.6pt;　
+}
+
+.text_class_month_subtitle {
+
+  stroke-opacity: 0;
+  fill-opacity: 1;
+
+  letter-spacing: 1pt;　
+}
+
+#text_id_month_date {
+
+  stroke-opacity: 0;
+  fill-opacity: 1;
+}
+
+#text_id_month_title {
+
+  stroke-opacity: 0;
+  fill-opacity: 1;
+}
+
+#text_id_month_subtitle, 
+#text_id_month_subtitle_2 {
+
+  stroke-opacity: 0;
+  fill-opacity: 1;
+}
+
+.path_class_total {
+
+  stroke-width: 0.7pt;
+
+  fill-opacity: 0;
+}
+
+.path_class_except_total {
+
+  stroke-width: 0.5pt;
+
+  fill-opacity: 0;
+}
+
+.text_class_month_year {
+
+  stroke-opacity: 0;
+
+  text-anchor: middle;
+}
+
+/*
+.rect_class_month_mode {
+
+  stroke-width: 0.8pt;
+
+  stroke: #FCFCFC;
+
+  rx: 3pt;
+  ry: 3pt;
+
+  kerning: 0.5pt;　
+}
+
+.text_class_month_mode {
+  
+  stroke-opacity: 0;
+  
+  cursor: pointer;
+}
+*/
+
+#line_id_month_select {
+
+  stroke: 1pt;
+  stroke-opacity: 0.4;
+  fill-opacity: 0;
+}
+
+.line_class_month {
+
+  stroke-width: 9pt;
+  stroke-opacity: 0;
+}
+
+#line_id_zero {
+
+  stroke: 0.2pt;
+  stroke-opacity: 0.4;
+  fill-opacity: 0;
+}
+
+.text_class_ruler {
+
+  stroke-opacity: 0;
+  fill-opacity: 0.4;
+}

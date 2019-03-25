@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Where are the Visitors of Taiwan from?</title>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-133306735-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-133306735-1');
+	</script>
+
+    <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <script src="http://d3js.org/d3.v4.min.js"></script>
+  	<script src="jquery-3.3.1.min.js"></script>
+
+  	<link rel="stylesheet" type="text/css" href="css/util.css" />
+  	<link rel="stylesheet" type="text/css" href="css/main.css" />
+  	<link rel="stylesheet" type="text/css" href="css/all.css" />
+  	<link rel="stylesheet" type="text/css" href="css/by_country.css" />
+  	<link rel="stylesheet" type="text/css" href="css/by_ranking.css" />
+  	<link rel="stylesheet" type="text/css" href="css/by_month.css" />
+  	<link rel="stylesheet" type="text/css" href="css/about_me.css" />
+  	<script type="text/javascript" src='define.js'></script>
+  	<script type="text/javascript" src='util.js'></script>
+  	<script type="text/javascript" src='main.js'></script>
+  	<script type="text/javascript" src='all.js'></script>
+  	<script type="text/javascript" src='by_country.js'></script>
+  	<script type="text/javascript" src='by_ranking.js'></script>
+  	<script type="text/javascript" src='by_month.js'></script>
+  	<script type="text/javascript" src='about_me.js'></script>
+
+	<script type="text/javascript">
+
+	var g_sFilePath = "json";
+	var g_sFileName = "tourists";
+
+	var g_nSVG_Main_W_PX = 0;
+	var g_nSVG_Main_H_PX = 0;
+	var g_nSVG_Main_W_PT = 800;
+	var g_nSVG_Main_H_PT = 3900;
+
+	function main() {
+
+		let attrs = getUrlVars();
+		
+		page = (attrs.p == null) ? "" : attrs.p;
+
+		$('#span_id_options_mode').hide();
+
+		g_nSVG_Main_W_PX = document.getElementById("div_id_main").offsetWidth;  // 1067
+		g_nSVG_Main_H_PX = document.getElementById("div_id_main").offsetHeight; // 3333
+
+		funcLoadData(g_sFilePath, g_sFileName, funcMain, page);
+
+		g_nSVG_Top_H_PX = document.getElementById("div_id_top").offsetHeight; // 3333
+
+		//$("#div_id_main").offset({top: g_nSVG_Top_H_PX});
+		$("#div_id_main").offset({top: 200});
+
+		console.log(g_nSVG_Main_W_PX, g_nSVG_Main_H_PX);
+		console.log(g_nSVG_Top_H_PX);
+	}
+
+	</script>
+
+</head>
+
+<body>
+
+<div id="div_id_top">
+
+	<div id="div_id_title">
+		<span id="span_id_title" class="color_main font_size_36 font_weight_600">WHERE ARE THE VISITORS OF TAIWAN FROM?</span>
+	</div>
+
+	<div id="div_id_options">
+		<div id="div_id_pages">
+			<span id="span_id_options_all" class="span_class_pages color_main font_size_12">All</span>
+			<span id="span_id_options_by_country" class="span_class_pages color_main font_size_12">By Country</span>
+			<span id="span_id_options_by_ranking" class="span_class_pages color_main font_size_12">By Ranking</span>
+			<span id="span_id_options_by_month" class="span_class_pages color_main font_size_12">By Month</span>
+			<span><a id="a_id_options_data_source" class="span_class_pages color_main font_size_12" href="https://www.kaggle.com/ceshine/visitors-to-taiwan-by-purpose/" target="_blank">Data Source</a></span>
+			<span id="span_id_options_about_me" class="span_class_pages color_main font_size_12">About Me</span>
+		</div>
+		<div id="div_id_page_options_background"></div>
+	</div>
+
+</div>
+
+<div id="div_id_main">
+</div>
+
+<script type="text/javascript">
+		
+	window.load = main();
+
+</script>
+
+</body>
+
+</html>

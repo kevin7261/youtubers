@@ -1,0 +1,31 @@
+
+.text_class_month_rank,
+#text_id_month_selected_rank {
+
+  stroke-opacity: 0;
+  fill-opacity: 1;
+
+  text-anchor: middle;
+}
+
+.text_class_month_year_rank {
+
+  stroke-opacity: 0;
+  fill-opacity: 0.4;
+
+  text-anchor: middle;
+}
+
+#text_id_rank_selected {
+
+  text-anchor: middle;
+
+  letter-spacing: 1.6pt;
+}
+
+#circle_id_rank_selected {
+
+  stroke-width: 0.5;
+
+  fill-opacity: 0;
+}
