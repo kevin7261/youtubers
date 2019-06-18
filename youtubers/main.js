@@ -1,5 +1,5 @@
 
-VIDEOS_YEAR_START = 16;
+VIDEOS_YEAR_START = 17;
 VIDEOS_YEAR_END = 19;
 
 MAIN_WIDTH = 800; // pt
@@ -210,7 +210,7 @@ let vfScale_ViewCount_PX_Youtuber = [];
 function funcDraw_Content() {
 
 	let nDate_Min = parseInt(VIDEOS_YEAR_START + "0101");//d3.min(g_dsYoutubers, function (d) { return parseInt(d.videos[d.videos.length - 1].date); });
-	let nDate_Max = parseInt(VIDEOS_YEAR_END + "0331");//d3.max(g_dsYoutubers, function (d) { return parseInt(d.videos[0].date); });
+	let nDate_Max = parseInt(VIDEOS_YEAR_END + "0430");//d3.max(g_dsYoutubers, function (d) { return parseInt(d.videos[0].date); });
 	let nViewCount_Max = 212149287;//d3.max(g_dsYoutubers, function (d) { return d3.max(d.videos, function (d_video) { return d_video.view_count; }); });
 	let nLikeCount_Max = 515037;//d3.max(g_dsYoutubers, function (d) { return d3.max(d.videos, function (d_video) { return d_video.like_count; }); });
 	let nDislikeCount_Max = 430342;//d3.max(g_dsYoutubers, function (d) { return d3.max(d.videos, function (d_video) { return d_video.dislike_count; }); });
@@ -230,7 +230,7 @@ function funcDraw_Content() {
 								.domain([0, g_dsYoutubers.length])
 								.range([0, YOUTUBER_HEIGHT * g_dsYoutubers.length]);
 
-	let nDate_Count = getDateNumber("190331", VIDEOS_YEAR_START, VIDEOS_YEAR_END);
+	let nDate_Count = getDateNumber("190430", VIDEOS_YEAR_START, VIDEOS_YEAR_END);
 
 	fScale_Date_PT = d3.scaleLinear()
 								.domain([0, nDate_Count])
@@ -648,7 +648,7 @@ function funcDraw_YoutuberVideos(svgYoutubers, d, i,
 		.enter()
 			.append("circle")
 				.attr("class", "color_view circle_class_video_" + d.channel_id)
-				.attr("cx", function(d_video) { return (getDateNumber(d_video.date, VIDEOS_YEAR_START, VIDEOS_YEAR_END) * MAIN_WIDTH / getDateNumber("190331", VIDEOS_YEAR_START, VIDEOS_YEAR_END)) + "pt"; })
+				.attr("cx", function(d_video) { return (getDateNumber(d_video.date, VIDEOS_YEAR_START, VIDEOS_YEAR_END) * MAIN_WIDTH / getDateNumber("190430", VIDEOS_YEAR_START, VIDEOS_YEAR_END)) + "pt"; })
 				.attr("cy", function(d_video) { return (YOUTUBER_HEIGHT) + "pt"; })
 				.attr("fill", "rgba(40, 40, 40)")
 				.attr("r", 0.5 + "pt")
